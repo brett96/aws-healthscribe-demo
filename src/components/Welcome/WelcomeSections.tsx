@@ -17,7 +17,7 @@ export function Overview() {
                 <SpaceBetween size={'s'}>
                     <TextContent>
                         <Box variant="p">
-                            This sample React based web app shows the art of the possible in using AWS HealthScribe.
+                            This demo shows how AWS HealthScribe and Comprehend Medical can be used to analyze patient-clinician conversations.
                         </Box>
                         <Box variant="p">
                             AWS HealthScribe is a HIPAA-eligible service empowering healthcare software vendors to build

@@ -47,7 +47,7 @@ export default function WelcomeHeader() {
             >
                 <SpaceBetween size="xl">
                     <Box fontSize="display-l" fontWeight="bold">
-                        Cerca Labs HealthScribe Demo
+                        CercaLabs HealthScribe Demo
                     </Box>
                     <Box fontSize="display-l">Powered by AWS HealthScribe</Box>
                 </SpaceBetween>
