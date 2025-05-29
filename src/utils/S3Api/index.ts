@@ -3,7 +3,7 @@
 import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { getCurrentUser } from 'aws-amplify/auth';
-import { uploadData } from 'aws-amplify/storage';
+import { downloadData, uploadData } from 'aws-amplify/storage';
 import tk from 'timekeeper';
 
 import { getAmplifyRegion, getCredentials } from '@/utils/Sdk';
@@ -128,5 +128,25 @@ export async function fileUpload({ Key, Body, ContentType = 'audio/wav', callbac
     } catch (e: unknown) {
         const err = e as Error;
         throw new Error(`Error in S3 upload: ${err.message}`);
+    }
+}
+
+/**
+ * Download a file from S3 using Amplify Storage
+ * @param key The S3 key of the file to download
+ * @returns Promise<string> The file content as text
+ */
+export async function fileDownload(key: string): Promise<string> {
+    try {
+        const downloadResult = await downloadData({
+            path: key,
+        }).result;
+
+        // Convert the downloaded data to text
+        const blob = await downloadResult.body.blob();
+        return await blob.text();
+    } catch (e: unknown) {
+        const err = e as Error;
+        throw new Error(`Error downloading file from S3: ${err.message}`);
     }
 }

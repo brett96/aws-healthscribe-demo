@@ -22,6 +22,10 @@ const Conversations = lazy(() => import('@/components/Conversations'));
 const Conversation = lazy(() => import('@/components/Conversation'));
 const NewConversation = lazy(() => import('@/components/NewConversation'));
 const GenerateAudio = lazy(() => import('@/components/GenerateAudio'));
+const Documents = lazy(() => import('@/components/Documents'));
+const NewDocument = lazy(() => import('@/components/NewDocument'));
+const Document = lazy(() => import('@/components/Document'));
+const Patients = lazy(() => import('@/components/Patients'));
 
 export default function App() {
     const { isUserAuthenticated } = useAuthContext();
@@ -37,6 +41,10 @@ export default function App() {
                     <Route path="/conversation/:conversationName" element={<Conversation />} />
                     <Route path="/new" element={<NewConversation />} />
                     <Route path="/generate" element={<GenerateAudio />} />
+                    <Route path="/documents" element={<Documents />} />
+                    <Route path="/new-document" element={<NewDocument />} />
+                    <Route path="/document/:documentId" element={<Document />} />
+                    <Route path="/patients" element={<Patients />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>

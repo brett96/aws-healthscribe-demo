@@ -30,13 +30,16 @@ export function ConversationsHeaderActions({ selectedHealthScribeJob, refreshTab
 
     return (
         <>
-            <DeleteConversation
-                selectedHealthScribeJob={selectedHealthScribeJob}
-                deleteModalActive={deleteModalActive}
-                setDeleteModalActive={setDeleteModalActive}
-                refreshTable={refreshTable}
-            />
             <SpaceBetween direction="horizontal" size="s">
+                <Button onClick={() => navigate('/new')} iconName="add-plus">
+                    Upload New Audio File
+                </Button>
+                <DeleteConversation
+                    selectedHealthScribeJob={selectedHealthScribeJob}
+                    deleteModalActive={deleteModalActive}
+                    setDeleteModalActive={setDeleteModalActive}
+                    refreshTable={refreshTable}
+                />
                 <Button onClick={() => refreshTable()} iconName="refresh" />
                 <Button onClick={() => setDeleteModalActive(true)} disabled={actionButtonDisabled}>
                     Delete

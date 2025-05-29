@@ -22,12 +22,28 @@ export default function SideNav() {
             text: 'New Conversation',
             href: '/new',
         },
-        { type: 'divider' },
         {
             type: 'link',
             text: 'Generate Audio',
             href: '/generate',
         },
+        { type: 'divider' },
+        {
+            type: 'link',
+            text: 'Document Analysis',
+            href: '/documents',
+        },
+        {
+            type: 'link',
+            text: 'New Document Analysis',
+            href: '/new-document',
+        },
+        // { type: 'divider' },
+        // {
+        //     type: 'link',
+        //     text: 'OpenMRS Patient Records',
+        //     href: '/patients',
+        // },
         { type: 'divider' },
         {
             type: 'link',
@@ -39,6 +55,13 @@ export default function SideNav() {
             type: 'link',
             text: 'AWS HealthScribe',
             href: 'https://aws.amazon.com/healthscribe',
+            external: true,
+        },
+        { type: 'divider' },
+        {
+            type: 'link',
+            text: 'Amazon Comprehend Medical',
+            href: 'https://aws.amazon.com/comprehend/medical',
             external: true,
         },
         {

@@ -17,12 +17,13 @@ export function Overview() {
                 <SpaceBetween size={'s'}>
                     <TextContent>
                         <Box variant="p">
-                            This demo shows how AWS HealthScribe and Comprehend Medical can be used to analyze patient-clinician conversations.
+                            This demo shows how AWS HealthScribe and Comprehend Medical can be used to analyze
+                            patient-clinician conversations and medical documents.
                         </Box>
                         <Box variant="p">
-                            AWS HealthScribe is a HIPAA-eligible service empowering healthcare software vendors to build
-                            clinical applications that automatically generate clinical notes by analyzing
-                            patient-clinician conversations.
+                            AWS HealthScribe & Comprehend Medical are HIPAA-eligible services that empower healthcare
+                            software vendors to build clinical applications that automatically generate clinical notes
+                            by analyzing patient-clinician conversations, and provide insights into medical documents.
                         </Box>
                     </TextContent>
                 </SpaceBetween>

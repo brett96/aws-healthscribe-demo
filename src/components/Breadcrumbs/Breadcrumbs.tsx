@@ -67,6 +67,39 @@ export default function Breadcrumbs() {
                 href: '/generate',
             },
         ];
+    } else if (pathName === '/documents') {
+        items = [
+            ...baseBreadcrumb,
+            {
+                text: 'Document Analysis',
+                href: '/documents',
+            },
+        ];
+    } else if (pathName === '/new-document') {
+        items = [
+            ...baseBreadcrumb,
+            {
+                text: 'Document Analysis',
+                href: '/documents',
+            },
+            {
+                text: 'New Document Analysis',
+                href: '/new-document',
+            },
+        ];
+    } else if (pathName.startsWith('/document/')) {
+        const documentId = pathName.split('/')[2];
+        items = [
+            ...baseBreadcrumb,
+            {
+                text: 'Document Analysis',
+                href: '/documents',
+            },
+            {
+                text: documentId,
+                href: `/document/${documentId}`,
+            },
+        ];
     }
 
     if (isUserAuthenticated) {

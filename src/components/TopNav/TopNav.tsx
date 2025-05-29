@@ -143,7 +143,7 @@ export default function TopNav() {
             <TopNavigation
                 identity={{
                     href: '/',
-                    title: 'CercaLabs HealthScribe Demo',
+                    title: 'CercaLabs Medical AI Demo',
                 }}
                 utilities={navUtils}
             />
