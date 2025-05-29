@@ -1,6 +1,6 @@
 {
     "providers": ["awscloudformation"],
-    "projectName": "AwsHealthScribeDemo",
+    "projectName": "awshealthscribedemo",
     "version": "3.1",
     "frontend": "javascript",
     "javascript": {
@@ -8,8 +8,8 @@
         "config": {
             "SourceDir": "src",
             "DistributionDir": "build",
-            "BuildCommand": "yarn run build",
-            "StartCommand": "yarn run dev"
+            "BuildCommand": "npm.cmd run-script build",
+            "StartCommand": "npm.cmd run-script start"
         }
     }
 }

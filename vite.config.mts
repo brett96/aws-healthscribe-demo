@@ -25,4 +25,18 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    server: {
+        proxy: {
+            '/openmrs': {
+                target: 'http://localhost',
+                changeOrigin: true,
+                secure: false,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Authorization, Content-Type, X-Requested-With',
+                },
+            },
+        },
+    },
 });
